@@ -56,11 +56,11 @@ const animationStates = [
   },
 ];
 
-let animationState = selection.value;
+let playerState = selection.value;
 
 
 selection.addEventListener('change', event=> {
-  animationState = event.target.value;
+  playerState = event.target.value;
 })
 
 animationStates.forEach((state, i) => {
@@ -88,10 +88,10 @@ const animate = (_) => {
   // ctx.fillRect(100, 50, 100, 100);
 
   let position =
-    Math.floor(gameFrame / staggerFrames) % spriteAnimation[`${animationState}`].loc.length;
+    Math.floor(gameFrame / staggerFrames) % spriteAnimation[`${playerState}`].loc.length;
 
-  frameX = spriteAnimation[`${animationState}`].loc[position].x;
-  frameY = spriteAnimation[`${animationState}`].loc[position].y;
+  frameX = spriteAnimation[`${playerState}`].loc[position].x;
+  frameY = spriteAnimation[`${playerState}`].loc[position].y;
   ctx.drawImage(
     playeImage,
     frameX,
