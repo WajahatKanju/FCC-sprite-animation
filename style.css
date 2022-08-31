@@ -8,7 +8,16 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column;
+    gap: 2rem;
 }
 canvas {
     border: 10px solid #000;
+}
+
+.controls{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.controls, select, option {
+    font-size: 1.25rem;
 }
